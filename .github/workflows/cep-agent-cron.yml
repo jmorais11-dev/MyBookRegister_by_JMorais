@@ -10,10 +10,11 @@ name: Disparar relatórios do CEP Agent (Render free)
 # barra no final. Ex.: https://tpe-cep-agent.onrender.com
 
 on:
-  schedule:
-    # Horários em UTC (BRT = UTC-3 o ano todo, sem horário de verão desde 2019).
-    - cron: "0 6 * * *"   # 03:00 BRT — diário
-    - cron: "5 6 1 * *"   # 03:05 BRT, dia 1 — mensal
+  # Agendamento pausado (estava falhando todo dia). Para reativar, descomente.
+  # schedule:
+  #   # Horários em UTC (BRT = UTC-3 o ano todo, sem horário de verão desde 2019).
+  #   - cron: "0 6 * * *"   # 03:00 BRT — diário
+  #   - cron: "5 6 1 * *"   # 03:05 BRT, dia 1 — mensal
   workflow_dispatch:
     inputs:
       job:
